@@ -1,263 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Martin Jurk – Rust &amp; Java Backend Developer and Accessibility Coach</title>
-  <meta name="description" content="Martin Jurk: blind backend developer (Rust, Java, Spring Boot, DevOps) and coach for accessible working and programming with a screen reader.">
-
-  <style>
-    :root {
-      --bg:        #ffffff;
-      --ink:       #14161a;
-      --muted:     #4a4f57;
-      --accent:    #1f4fa3;
-      --accent-dk: #16336b;
-      --line:      #d9dce1;
-      --focus:     #b8400a;
-      --maxw:      44rem;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg:     #101216;
-        --ink:    #f2f4f7;
-        --muted:  #b8bdc6;
-        --accent: #7ea6ff;
-        --accent-dk: #a9c4ff;
-        --line:   #2a2e36;
-        --focus:  #ffb27a;
-      }
-    }
-
-    * { box-sizing: border-box; }
-
-    html { font-size: 112.5%; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 0.5rem;
-      top: -3rem;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      transition: top 0.15s ease;
-      z-index: 10;
-    }
-    .skip-link:focus { top: 0.5rem; }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    header { padding: 3.5rem 0 1rem; }
-
-    .eyebrow {
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
-      margin: 0 0 0.75rem;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 2.9rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin: 0 0 0.75rem;
-    }
-
-    .lead {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin: 0 0 1.5rem;
-      max-width: 38rem;
-    }
-
-    main { padding: 1rem 0 3rem; }
-
-    section { padding: 2rem 0; border-top: 1px solid var(--line); }
-    section:first-of-type { border-top: 0; }
-
-    h2 {
-      font-size: 1.5rem;
-      letter-spacing: -0.01em;
-      margin: 0 0 0.75rem;
-    }
-
-    h3 { font-size: 1.1rem; margin: 1.25rem 0 0.35rem; }
-
-    p { margin: 0 0 1rem; }
-
-    a { color: var(--accent); text-underline-offset: 3px; }
-    a:hover { color: var(--accent-dk); }
-
-    a:focus-visible,
-    .btn:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
-
-    ul { margin: 0 0 1rem; padding-left: 1.25rem; }
-    li { margin: 0.35rem 0; }
-
-    .offer {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 1rem;
-    }
-    .offer li {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 1.1rem 1.25rem;
-      margin: 0;
-    }
-    .offer h3 { margin-top: 0; }
-    .offer p { margin-bottom: 0; color: var(--muted); }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.75rem 1.4rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .btn:hover { background: var(--accent-dk); color:#fff; }
-
-    .contact a { font-weight: 600; }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 2rem 0 3rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; scroll-behavior: auto !important; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Jurk – Backend Developer, Rust &amp; Java</title>
+<meta name="description" content="Martin Jurk: backend developer specialising in Rust, Java/Spring Boot, OAuth2/OIDC authentication and Kubernetes. Federated data platforms in medical research.">
+<link rel="canonical" href="https://martin1088.github.io/martin1088/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Martin Jurk – Backend Developer, Rust &amp; Java">
+<meta property="og:description" content="Backend developer specialising in Rust, Java/Spring Boot, OAuth2/OIDC authentication and Kubernetes.">
+<meta property="og:url" content="https://martin1088.github.io/martin1088/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
+<a class="skip-link" href="#content">Skip to content</a>
 
-  <div class="wrap">
-    <header>
-      <p class="eyebrow">Backend Development &amp; Coaching</p>
-      <h1>Martin Jurk</h1>
-      <p class="lead">
-        Blind backend developer and coach. I build software with Rust and
-        Java, Spring Boot and modern DevOps &ndash; and I show others how to
-        work and program productively with a screen reader.
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Backend Development</p>
+    <h1>Martin Jurk</h1>
+    <p class="lead">
+      Backend developer. I build services in Rust and Java &ndash; from the
+      API through authentication to the Kubernetes deployment. Most recently
+      technical lead for two federated data platforms in cancer research.
+    </p>
+    <p class="btn-row">
+      <a class="btn" href="#work">See my work</a>
+  
+    </p>
+  </header>
+
+  <main id="content">
+
+    <section aria-labelledby="about">
+      <h2 id="about">What I do</h2>
+      <p>
+        My focus is the backend and the security layer around it: REST APIs,
+        OAuth2 and OIDC, secrets and token handling, containerised deployment.
+        I have spent the last years on federated systems &ndash; independent
+        sites that exchange sensitive data and need every approval to be
+        traceable afterwards.
       </p>
-      <a class="btn" href="#contact">Get in touch</a>
-    </header>
+      <p>
+        I work terminal-first with a screen reader, which makes me precise
+        about the things that are easy to skip: readable architecture
+        documentation, reproducible builds, and interfaces that survive
+        without a mouse.
+      </p>
+    </section>
 
-    <main id="content">
-      <section aria-labelledby="about">
-        <h2 id="about">About me</h2>
-        <p>
-          I develop primarily on the backend &ndash; from the API through
-          authentication to deployment. Accessibility isn't an add-on for
-          me, it's a mindset: I work terminal-first with a screen reader
-          and know from daily practice which tools and workflows actually
-          hold up.
-        </p>
-        <p>
-          I'm driven by analytical thinking, curiosity, and resilience.
-          My focus areas are Rust and Java, web development, DevOps, cloud,
-          and building transparent, auditable systems.
-        </p>
-      </section>
+    <section aria-labelledby="work">
+      <h2 id="work">Selected work</h2>
 
-      <section aria-labelledby="project">
-        <h2 id="project">My project</h2>
-        <h3>accessible-job-manager</h3>
-        <p>
-          An accessible full-stack application for managing jobs &ndash; a
-          Spring Boot backend, Angular frontend, containerized with Docker,
-          featuring authentication, clean secrets management, and a CI/CD
-          pipeline. The project shows how technical quality and
-          accessibility belong together.
-        </p>
-        <p>
-          <a href="https://github.com/Martin1088/accessible-job-manager">
-            View the source on GitHub
-          </a>
-        </p>
-      </section>
+      <ul class="cards" role="list">
 
-      <section aria-labelledby="coaching">
-        <h2 id="coaching">Coaching &amp; services</h2>
-        <p>
-          I help people and teams work accessibly &ndash; hands-on,
-          patient, and grounded in my own experience.
-        </p>
-        <ul class="offer">
-          <li>
-            <h3>Learn to program blind</h3>
-            <p>
-              Screen-reader-driven development: editor, terminal,
-              navigation, and productive day-to-day workflows.
-            </p>
-          </li>
-          <li>
-            <h3>Accessible working</h3>
-            <p>
-              Tools, settings, and methods for an accessible digital
-              workplace.
-            </p>
-          </li>
-          <li>
-            <h3>IT topics &amp; guidance</h3>
-            <p>
-              Individual support for concrete technical questions, setup,
-              and further development.
-            </p>
-          </li>
-        </ul>
-      </section>
+        <li>
+          <h3>ITCC Federated Data Hub</h3>
+          <p>
+            International integration of paediatric cancer data across clinical
+            sites. I was technical lead and designed and documented the
+            federated architecture: FHIR and genetic data ingestion,
+            pseudonymised central storage, Kubernetes deployment.
+          </p>
+          <p class="stack"><strong>Rust</strong> &middot; Axum, Tokio, aws-sdk-s3 &middot; Apache Iceberg, S3, Kubernetes</p>
+          <p><a href="https://github.com/samply/itcc-federated-data-hub">Source on GitHub</a></p>
+        </li>
 
-      <section class="contact" id="contact" aria-labelledby="contact-h">
-        <h2 id="contact-h">Contact</h2>
-        <p>
-          Interested in working together or in coaching? I'd be glad to
-          hear from you.
-        </p>
-        <p>
-          Email:
-          <a href="mailto:access.job.manager@gmail.com">access.job.manager@gmail.com</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/Martin1088">github.com/Martin1088</a>
-        </p>
-      </section>
-    </main>
+        <li>
+          <h3>Accessible Job Manager</h3>
+          <p>
+            My own project, and the one I would show first. A job application
+            manager for blind users, where screen reader operation is the
+            premise the architecture is built on rather than a layer added
+            afterwards. A posting is imported from a link and extracted into
+            structured fields by a local language model. The cover letter is
+            written as text and comes out as a DIN 5008-compliant PDF: the
+            page geometry is a server-side guarantee, so nobody has to arrange
+            an address block by hand.
+          </p>
+          <p>
+            The part I find most interesting is the role model. Advisors and
+            reviewers can support an applicant &ndash; suggest openings, read a
+            letter before it goes out &ndash; but every document access is granted
+            by the user and can be revoked again. MIT licensed and built to be
+            self-hosted, so vocational rehabilitation providers can run their
+            own instance.
+          </p>
+          <p class="stack"><strong>Java, Spring Boot</strong> &middot; Spring Security OAuth2, JPA &middot; Angular &middot; docx4j, Gotenberg &middot; PostgreSQL, Garage (S3), Authentik &middot; Docker, Azure Container Apps</p>
+          <p><a href="https://github.com/Martin1088/accessible-job-manager">Source and full documentation on GitHub</a></p>
+        </li>
+
+        <li>
+          <h3>secret-sync</h3>
+          <p>
+            Authentication component for the Bridgehead deployment. I
+            contributed the OAuth automation and server-side token rotation:
+            application and user enrolment against Authentik and Keycloak
+            through their APIs, so component access is provisioned without
+            manual secret handling.
+          </p>
+          <p class="stack"><strong>Rust</strong> &middot; Axum, Tokio, reqwest &middot; Authentik, Keycloak, OAuth2</p>
+          <p><a href="https://github.com/samply/secret-sync">Source on GitHub</a></p>
+        </li>
+
+        <li>
+          <h3>Samply Exporter &ndash; authentication layer</h3>
+          <p>
+            Secured an existing Java service that exports FHIR data into
+            several formats. I implemented multiple Spring Security filter
+            chains side by side &ndash; JWT resource server, browser login and
+            API key &ndash; plus group-based authorization via OIDC claims.
+          </p>
+          <p class="stack"><strong>Java</strong> &middot; Spring Boot, Spring Security 6, OAuth2/OIDC</p>
+          <p><a href="https://github.com/samply/exporter/pull/75">The pull request on GitHub</a></p>
+        </li>
+
+        <li>
+          <h3>Workspace booking system</h3>
+          <p>
+            A reinterpretation of the classic meeting room booking system as a
+            web service: booking, administration, and OAuth login. Built
+            end to end by me as a way to work through an ORM-heavy domain in
+            Rust.
+          </p>
+          <p class="stack"><strong>Rust</strong> &middot; Loco, SeaORM &middot; Angular, OAuth2</p>
+          <!-- TODO: check this repository URL on github.com/Martin1088 -->
+          <p><a href="https://github.com/Martin1088">On my GitHub profile</a></p>
+        </li>
+
+        <li>
+          <h3>Architecture diagrams with a screen reader</h3>
+          <p>
+            Diagrams are usually the least accessible artefact in a project.
+            PlantUML is text, so it is the exception &ndash; a collection of
+            ERDs, class diagrams, process flows and network views I write and
+            read without ever seeing them rendered.
+          </p>
+          <p class="stack"><strong>PlantUML</strong> &middot; NeoVim, terminal workflow</p>
+          <!-- TODO: check the exact spelling of this repository name -->
+          <p><a href="https://github.com/Martin1088/Plantuml-With-Screenreader">Source on GitHub</a></p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Technical profile</h2>
+      <ul class="skills" role="list">
+        <li>
+          <strong>Rust &ndash; production, around two years</strong>
+          <span>Axum, Tokio, SeaORM, Loco, Tauri</span>
+        </li>
+        <li>
+          <strong>Java and Spring Boot</strong>
+          <span>Spring Security (OAuth2/OIDC), Hibernate/JPA, Gradle</span>
+        </li>
+        <li>
+          <strong>Identity and access</strong>
+          <span>OAuth2, OIDC, Authentik, Keycloak, token rotation</span>
+        </li>
+        <li>
+          <strong>Infrastructure</strong>
+          <span>Kubernetes (CKAD certified), Docker, Helm, GitLab CI, GitHub Actions, Linux, S3</span>
+        </li>
+        <li>
+          <strong>Also used</strong>
+          <span>Go (project level), Python (Flask, SQLAlchemy), Angular, Svelte, PostgreSQL</span>
+        </li>
+      </ul>
+      <p>
+        Trained as IT specialist for application development
+        (IHK Fachinformatiker Anwendungsentwicklung) at the German Cancer
+        Research Center in Heidelberg.
+      </p>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p>
+        I am open to backend roles &ndash; remote, or within commuting
+        distance of Karlsruhe.
+      </p>
+      <p>Email: <a href="mailto:access.job.manager@gmail.com">access.job.manager@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Martin1088">github.com/Martin1088</a></p>
+    </section>
+
+  </main>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>
+      I also coach people who want to work and program with a screen reader &ndash;
+      <a href="coaching/">more about that here</a>.
+    </p>
+    <p>&copy; 2026 Martin Jurk. This site is built to be accessible, on purpose.</p>
   </div>
+</footer>
 
-  <footer>
-    <div class="wrap">
-      <p>&copy; 2026 Martin Jurk. This site is intentionally built to be accessible.</p>
-    </div>
-  </footer>
 </body>
 </html>
