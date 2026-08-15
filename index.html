@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Jurk – Rust &amp; Java Backend Developer and Accessibility Coach</title>
+  <meta name="description" content="Martin Jurk: blind backend developer (Rust, Java, Spring Boot, DevOps) and coach for accessible working and programming with a screen reader.">
+
+  <style>
+    :root {
+      --bg:        #ffffff;
+      --ink:       #14161a;
+      --muted:     #4a4f57;
+      --accent:    #1f4fa3;
+      --accent-dk: #16336b;
+      --line:      #d9dce1;
+      --focus:     #b8400a;
+      --maxw:      44rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:     #101216;
+        --ink:    #f2f4f7;
+        --muted:  #b8bdc6;
+        --accent: #7ea6ff;
+        --accent-dk: #a9c4ff;
+        --line:   #2a2e36;
+        --focus:  #ffb27a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { font-size: 112.5%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 0.5rem;
+      top: -3rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      transition: top 0.15s ease;
+      z-index: 10;
+    }
+    .skip-link:focus { top: 0.5rem; }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header { padding: 3.5rem 0 1rem; }
+
+    .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin: 0 0 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.9rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.75rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+      max-width: 38rem;
+    }
+
+    main { padding: 1rem 0 3rem; }
+
+    section { padding: 2rem 0; border-top: 1px solid var(--line); }
+    section:first-of-type { border-top: 0; }
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.75rem;
+    }
+
+    h3 { font-size: 1.1rem; margin: 1.25rem 0 0.35rem; }
+
+    p { margin: 0 0 1rem; }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { color: var(--accent-dk); }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+
+    .offer {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+    }
+    .offer li {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      margin: 0;
+    }
+    .offer h3 { margin-top: 0; }
+    .offer p { margin-bottom: 0; color: var(--muted); }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn:hover { background: var(--accent-dk); color:#fff; }
+
+    .contact a { font-weight: 600; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Backend Development &amp; Coaching</p>
+      <h1>Martin Jurk</h1>
+      <p class="lead">
+        Blind backend developer and coach. I build software with Rust and
+        Java, Spring Boot and modern DevOps &ndash; and I show others how to
+        work and program productively with a screen reader.
+      </p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </header>
+
+    <main id="content">
+      <section aria-labelledby="about">
+        <h2 id="about">About me</h2>
+        <p>
+          I develop primarily on the backend &ndash; from the API through
+          authentication to deployment. Accessibility isn't an add-on for
+          me, it's a mindset: I work terminal-first with a screen reader
+          and know from daily practice which tools and workflows actually
+          hold up.
+        </p>
+        <p>
+          I'm driven by analytical thinking, curiosity, and resilience.
+          My focus areas are Rust and Java, web development, DevOps, cloud,
+          and building transparent, auditable systems.
+        </p>
+      </section>
+
+      <section aria-labelledby="project">
+        <h2 id="project">My project</h2>
+        <h3>accessible-job-manager</h3>
+        <p>
+          An accessible full-stack application for managing jobs &ndash; a
+          Spring Boot backend, Angular frontend, containerized with Docker,
+          featuring authentication, clean secrets management, and a CI/CD
+          pipeline. The project shows how technical quality and
+          accessibility belong together.
+        </p>
+        <p>
+          <a href="https://github.com/Martin1088/accessible-job-manager">
+            View the source on GitHub
+          </a>
+        </p>
+      </section>
+
+      <section aria-labelledby="coaching">
+        <h2 id="coaching">Coaching &amp; services</h2>
+        <p>
+          I help people and teams work accessibly &ndash; hands-on,
+          patient, and grounded in my own experience.
+        </p>
+        <ul class="offer">
+          <li>
+            <h3>Learn to program blind</h3>
+            <p>
+              Screen-reader-driven development: editor, terminal,
+              navigation, and productive day-to-day workflows.
+            </p>
+          </li>
+          <li>
+            <h3>Accessible working</h3>
+            <p>
+              Tools, settings, and methods for an accessible digital
+              workplace.
+            </p>
+          </li>
+          <li>
+            <h3>IT topics &amp; guidance</h3>
+            <p>
+              Individual support for concrete technical questions, setup,
+              and further development.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-h">
+        <h2 id="contact-h">Contact</h2>
+        <p>
+          Interested in working together or in coaching? I'd be glad to
+          hear from you.
+        </p>
+        <p>
+          Email:
+          <a href="mailto:YOUR-ADDRESS@example.com">YOUR-ADDRESS@example.com</a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Martin1088">github.com/Martin1088</a>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Martin Jurk. This site is intentionally built to be accessible.</p>
+    </div>
+  </footer>
+</body>
+</html>
